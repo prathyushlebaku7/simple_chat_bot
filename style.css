@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#chatHistoryContainer {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+#chatHistory {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.speechBubble {
+  padding: 12px 18px;
+  border-radius: 18px;
+  max-width: 80%;
+  word-wrap: break-word;
+  font-size: 15px;
+  animation: bounceIn 0.4s ease;
+}
+
+.speechBubble.assistant {
+  align-self: flex-start;
+  background: linear-gradient(135deg, #8ec5fc, #e0c3fc);
+  color: black;
+}
+
+.speechBubble.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  color: black;
+}
+
+.intro {
+  text-align: center;
+}
+
+.controls {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#toggleBtn {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+#toggleBtn.active {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+
+.mic-icon::before {
+  content: "🎤";
+  font-size: 24px;
+}
+
+#userVisualizer {
+  width: 20px;
+  height: 20px;
+  background-color: #ff4b5c;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+
+#searchToggleLabel {
+  margin-left: 12px;
+  font-size: 14px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+}
+
+#searchToggle {
+  margin-right: 6px;
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

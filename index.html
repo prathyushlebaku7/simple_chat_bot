@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voice Chat with Web Search</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="chatHistoryContainer">
+      <div id="chatHistory">
+        <p class="speechBubble assistant intro">
+          👋 Hello! Tap the mic and let's chat.
+        </p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="toggleBtn">
+        <i class="mic-icon"></i>
+        <span id="btnText">Start</span>
+      </button>
+      <label id="searchToggleLabel">
+        <input type="checkbox" id="searchToggle" />
+        Use Web Search
+      </label>
+    </div>
+
+    <div id="userVisualizer"></div>
+  </div>
+
+  <audio id="pingSound" src="https://assets.mixkit.co/sfx/preview/mixkit-bubble-pop-up-alert-notification-2357.mp3" preload="auto"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
