@@ -89,7 +89,7 @@ async function letAISpeak() {
     }),
     headers: {
       "Content-Type": "application/json",
-      "Authorization": "Bearer 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" // Replace with your OpenAI key
+      "Authorization": "Bearer OPENAIKEY" // Replace with your OpenAI key
     }
   })).json();
 
